@@ -4,9 +4,11 @@
 
 const pushAndUnshift = (array) => {
     let initArray = [1,4,5,3]
+    console.log("Array inicial", initArray);
     for (let i = 0; i < array.length; i++) {
         i % 2 == 0 ? initArray.push(array[i]) : initArray.unshift(array[i]) 
     }
+    console.log("Array con datos a introducir", array);
     console.log("Array con datos introducidos alternadamente", initArray);
     return initArray
 }
@@ -29,14 +31,16 @@ console.log("///////////////////////////////////////////////////////////////////
    Dadas 2 listas ordenadas, obtener una 3era ordenada:                            */
 
 const orderArray = (array1, array2) => {
+        console.log("\nArray 1 a unir", array1);
+        console.log("Array 2 a unir", array2);
         let joinArray = [...array1, ...array2].sort()
-        console.log("\n Array ordenado", joinArray);
+        console.log("Array unido y ordenado", joinArray);
         return joinArray
 }
 
 /* MODIFICAR LOS VALORES DE LOS 2 ARRAY PARA PROBAR LA FUNCION Y ASI GENERAR 
    DISTINTOS CASOS DE PRUEBA                                                       */
-   
+
 let array1 = [1,3,5,8]
 let array2 = [2,3,6,9]
 orderArray(array1, array2)
